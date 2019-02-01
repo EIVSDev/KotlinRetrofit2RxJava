@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         //Init API
         val retrofit = RetrofitClient.instance
         jsonApi = retrofit.create(IMyAPI::class.java)
+        compositeDisposable = CompositeDisposable()
 
         //view
         recycler_post.setHasFixedSize(true)
